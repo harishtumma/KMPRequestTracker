@@ -9,6 +9,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -23,6 +24,8 @@ import com.example.kmprequesttracker.presentation.RequestDetailUiState
 @Composable
 fun RequestDetailScreen(
     state: RequestDetailUiState,
+    isArabic: Boolean,
+    onLanguageToggle: (Boolean) -> Unit,
     onBack: () -> Unit
 ) {
     Scaffold(
@@ -32,6 +35,22 @@ fun RequestDetailScreen(
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                },
+                actions = {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.padding(horizontal = 8.dp)
+                    ) {
+                        Text(
+                            text = if (isArabic) "AR" else "EN",
+                            style = MaterialTheme.typography.labelMedium
+                        )
+                        Switch(
+                            checked = isArabic,
+                            onCheckedChange = onLanguageToggle,
+                            modifier = Modifier.scale(0.8f)
+                        )
                     }
                 }
             )

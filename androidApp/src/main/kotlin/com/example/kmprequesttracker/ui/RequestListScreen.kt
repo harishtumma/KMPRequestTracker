@@ -8,6 +8,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -21,12 +22,32 @@ import com.example.kmprequesttracker.presentation.RequestListUiState
 @Composable
 fun RequestListScreen(
     state: RequestListUiState,
+    isArabic: Boolean,
+    onLanguageToggle: (Boolean) -> Unit,
     onEvent: (RequestListEvent) -> Unit,
     onNavigateToDetail: (String) -> Unit
 ) {
     Scaffold(
         topBar = {
-            TopAppBar(title = { Text(stringResource(R.string.requests_title)) })
+            TopAppBar(
+                title = { Text(stringResource(R.string.requests_title)) },
+                actions = {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.padding(horizontal = 8.dp)
+                    ) {
+                        Text(
+                            text = if (isArabic) "AR" else "EN",
+                            style = MaterialTheme.typography.labelMedium
+                        )
+                        Switch(
+                            checked = isArabic,
+                            onCheckedChange = onLanguageToggle,
+                            modifier = Modifier.scale(0.8f)
+                        )
+                    }
+                }
+            )
         }
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
