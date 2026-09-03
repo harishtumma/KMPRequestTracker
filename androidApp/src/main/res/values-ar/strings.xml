@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">تتبع الطلبات</string>
+    <string name="requests_title">طلباتي</string>
+    <string name="request_details">تفاصيل الطلب</string>
+    <string name="status_label">الحالة:</string>
+    <string name="history_label">سجل الحالة</string>
+    <string name="attachments_label">المرفقات</string>
+    <string name="outcome_label">النتيجة النهائية</string>
+    <string name="retry_button">إعادة المحاولة</string>
+    <string name="empty_requests">لم يتم العثور على طلبات.</string>
+    <string name="error_loading">فشل في تحميل الطلبات.</string>
+    <string name="loading">جاري التحميل...</string>
+
+    <string name="status_pending">قيد الانتظار</string>
+    <string name="status_in_progress">قيد المعالجة</string>
+    <string name="status_approved">تمت الموافقة</string>
+    <string name="status_rejected">مرفوض</string>
+    <string name="status_completed">مكتمل</string>
+</resources>
