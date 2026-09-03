@@ -46,4 +46,6 @@ This project follows **Clean Architecture** principles and a **Layered Architect
 - **Resources**: Standard native resources are used for localization to ensure full platform-specific feature support (like RTL mirroring).
 
 ## Screenshots
-screenshot/Screenshot_20260903_235903.png
+
+![App Screenshot](.screenshot/Screenshot_20260903_235903.png)
+
