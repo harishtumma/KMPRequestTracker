@@ -47,8 +47,8 @@ This project follows **Clean Architecture** principles and a **Layered Architect
 
 ## Screenshots
 
-![App Screenshot](.screenshot/Screenshot_20260903_235903.png)
-![App Screenshot](.screenshot/Screenshot_20260903_235954.png)
-![App Screenshot](.screenshot/Screenshot_20260904_000027.png)
-![App Screenshot](.screenshot/Screenshot_20260904_000042.png)
+![App Screenshot](https://github.com/harishtumma/KMPRequestTracker/blob/main/screenshot/Screenshot_20260903_235903.png)
+![App Screenshot](https://github.com/harishtumma/KMPRequestTracker/blob/main/screenshot/Screenshot_20260903_235954.png)
+![App Screenshot](https://github.com/harishtumma/KMPRequestTracker/blob/main/screenshot/Screenshot_20260904_000027.png)
+![App Screenshot](https://github.com/harishtumma/KMPRequestTracker/blob/main/screenshot/Screenshot_20260904_000042.png)
 
